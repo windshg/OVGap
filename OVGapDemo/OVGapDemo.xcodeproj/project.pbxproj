@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C15E542B17E2DFFB000135D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15E542A17E2DFFB000135D0 /* UIKit.framework */; };
+		C15E542D17E2DFFB000135D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15E542C17E2DFFB000135D0 /* Foundation.framework */; };
+		C15E542F17E2DFFB000135D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15E542E17E2DFFB000135D0 /* CoreGraphics.framework */; };
+		C15E543517E2DFFB000135D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C15E543317E2DFFB000135D0 /* InfoPlist.strings */; };
+		C15E543717E2DFFB000135D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C15E543617E2DFFB000135D0 /* main.m */; };
+		C15E543D17E2DFFB000135D0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C15E543C17E2DFFB000135D0 /* Default.png */; };
+		C15E543F17E2DFFB000135D0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C15E543E17E2DFFB000135D0 /* Default@2x.png */; };
+		C15E544117E2DFFB000135D0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C15E544017E2DFFB000135D0 /* Default-568h@2x.png */; };
+		C15E545917E2E0E2000135D0 /* JSONUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C15E545017E2E0E2000135D0 /* JSONUtility.m */; };
+		C15E545A17E2E0E2000135D0 /* NSString+URI.m in Sources */ = {isa = PBXBuildFile; fileRef = C15E545217E2E0E2000135D0 /* NSString+URI.m */; };
+		C15E545B17E2E0E2000135D0 /* OGInvokeCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C15E545417E2E0E2000135D0 /* OGInvokeCommand.m */; };
+		C15E545C17E2E0E2000135D0 /* OGPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C15E545617E2E0E2000135D0 /* OGPlugin.m */; };
+		C15E545D17E2E0E2000135D0 /* OGWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C15E545817E2E0E2000135D0 /* OGWebView.m */; };
+		D312504C17E84D3E00B09A98 /* AddressBookPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D312504B17E84D3E00B09A98 /* AddressBookPlugin.m */; };
+		D312504E17E84D8100B09A98 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D312504D17E84D8100B09A98 /* AddressBook.framework */; };
+		D377207717E7063600C87EF7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D377207617E7063600C87EF7 /* AVFoundation.framework */; };
+		D377207A17E712AF00C87EF7 /* demo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D377207917E712AF00C87EF7 /* demo.mp3 */; };
+		D377208317E72D4000C87EF7 /* OGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D377207D17E72D4000C87EF7 /* OGAppDelegate.m */; };
+		D377208417E72D4000C87EF7 /* OGDemoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D377207F17E72D4000C87EF7 /* OGDemoWebViewController.m */; };
+		D377208517E72D4000C87EF7 /* InfoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D377208217E72D4000C87EF7 /* InfoPlugin.m */; };
+		D377208817E72D8000C87EF7 /* AudioPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D377208717E72D8000C87EF7 /* AudioPlugin.m */; };
+		D377208B17E7332C00C87EF7 /* PhotoLibraryPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D377208A17E7332C00C87EF7 /* PhotoLibraryPlugin.m */; };
+		D377208E17E7336200C87EF7 /* CameraPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D377208D17E7336200C87EF7 /* CameraPlugin.m */; };
+		D377209117E733C900C87EF7 /* SenserPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D377209017E733C900C87EF7 /* SenserPlugin.m */; };
+		D377209417E7340600C87EF7 /* NetworkPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D377209317E7340600C87EF7 /* NetworkPlugin.m */; };
+		D377209717E735A400C87EF7 /* DispatchPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D377209617E735A400C87EF7 /* DispatchPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C15E542717E2DFFB000135D0 /* OVGapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OVGapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C15E542A17E2DFFB000135D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C15E542C17E2DFFB000135D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C15E542E17E2DFFB000135D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C15E543217E2DFFB000135D0 /* OVGapDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OVGapDemo-Info.plist"; sourceTree = "<group>"; };
+		C15E543417E2DFFB000135D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C15E543617E2DFFB000135D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C15E543817E2DFFB000135D0 /* OVGapDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OVGapDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C15E543C17E2DFFB000135D0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C15E543E17E2DFFB000135D0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C15E544017E2DFFB000135D0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C15E544F17E2E0E2000135D0 /* JSONUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONUtility.h; sourceTree = "<group>"; };
+		C15E545017E2E0E2000135D0 /* JSONUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtility.m; sourceTree = "<group>"; };
+		C15E545117E2E0E2000135D0 /* NSString+URI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URI.h"; sourceTree = "<group>"; };
+		C15E545217E2E0E2000135D0 /* NSString+URI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URI.m"; sourceTree = "<group>"; };
+		C15E545317E2E0E2000135D0 /* OGInvokeCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGInvokeCommand.h; sourceTree = "<group>"; };
+		C15E545417E2E0E2000135D0 /* OGInvokeCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGInvokeCommand.m; sourceTree = "<group>"; };
+		C15E545517E2E0E2000135D0 /* OGPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGPlugin.h; sourceTree = "<group>"; };
+		C15E545617E2E0E2000135D0 /* OGPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGPlugin.m; sourceTree = "<group>"; };
+		C15E545717E2E0E2000135D0 /* OGWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGWebView.h; sourceTree = "<group>"; };
+		C15E545817E2E0E2000135D0 /* OGWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGWebView.m; sourceTree = "<group>"; };
+		D312504A17E84D3E00B09A98 /* AddressBookPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookPlugin.h; sourceTree = "<group>"; };
+		D312504B17E84D3E00B09A98 /* AddressBookPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookPlugin.m; sourceTree = "<group>"; };
+		D312504D17E84D8100B09A98 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		D377207617E7063600C87EF7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D377207917E712AF00C87EF7 /* demo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = demo.mp3; sourceTree = "<group>"; };
+		D377207C17E72D4000C87EF7 /* OGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGAppDelegate.h; sourceTree = "<group>"; };
+		D377207D17E72D4000C87EF7 /* OGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGAppDelegate.m; sourceTree = "<group>"; };
+		D377207E17E72D4000C87EF7 /* OGDemoWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGDemoWebViewController.h; sourceTree = "<group>"; };
+		D377207F17E72D4000C87EF7 /* OGDemoWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGDemoWebViewController.m; sourceTree = "<group>"; };
+		D377208117E72D4000C87EF7 /* InfoPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPlugin.h; sourceTree = "<group>"; };
+		D377208217E72D4000C87EF7 /* InfoPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPlugin.m; sourceTree = "<group>"; };
+		D377208617E72D8000C87EF7 /* AudioPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlugin.h; sourceTree = "<group>"; };
+		D377208717E72D8000C87EF7 /* AudioPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlugin.m; sourceTree = "<group>"; };
+		D377208917E7332C00C87EF7 /* PhotoLibraryPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoLibraryPlugin.h; sourceTree = "<group>"; };
+		D377208A17E7332C00C87EF7 /* PhotoLibraryPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoLibraryPlugin.m; sourceTree = "<group>"; };
+		D377208C17E7336200C87EF7 /* CameraPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPlugin.h; sourceTree = "<group>"; };
+		D377208D17E7336200C87EF7 /* CameraPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPlugin.m; sourceTree = "<group>"; };
+		D377208F17E733C900C87EF7 /* SenserPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenserPlugin.h; sourceTree = "<group>"; };
+		D377209017E733C900C87EF7 /* SenserPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenserPlugin.m; sourceTree = "<group>"; };
+		D377209217E7340600C87EF7 /* NetworkPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkPlugin.h; sourceTree = "<group>"; };
+		D377209317E7340600C87EF7 /* NetworkPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkPlugin.m; sourceTree = "<group>"; };
+		D377209517E735A400C87EF7 /* DispatchPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchPlugin.h; sourceTree = "<group>"; };
+		D377209617E735A400C87EF7 /* DispatchPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchPlugin.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C15E542417E2DFFB000135D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D312504E17E84D8100B09A98 /* AddressBook.framework in Frameworks */,
+				D377207717E7063600C87EF7 /* AVFoundation.framework in Frameworks */,
+				C15E542B17E2DFFB000135D0 /* UIKit.framework in Frameworks */,
+				C15E542D17E2DFFB000135D0 /* Foundation.framework in Frameworks */,
+				C15E542F17E2DFFB000135D0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C15E541E17E2DFFB000135D0 = {
+			isa = PBXGroup;
+			children = (
+				D377207817E712AF00C87EF7 /* assets */,
+				C15E544D17E2E078000135D0 /* OVGapKit */,
+				C15E543017E2DFFB000135D0 /* OVGapDemo */,
+				C15E542917E2DFFB000135D0 /* Frameworks */,
+				C15E542817E2DFFB000135D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C15E542817E2DFFB000135D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C15E542717E2DFFB000135D0 /* OVGapDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C15E542917E2DFFB000135D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D312504D17E84D8100B09A98 /* AddressBook.framework */,
+				D377207617E7063600C87EF7 /* AVFoundation.framework */,
+				C15E542A17E2DFFB000135D0 /* UIKit.framework */,
+				C15E542C17E2DFFB000135D0 /* Foundation.framework */,
+				C15E542E17E2DFFB000135D0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C15E543017E2DFFB000135D0 /* OVGapDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D377207B17E72D4000C87EF7 /* Classes */,
+				C15E543117E2DFFB000135D0 /* Supporting Files */,
+			);
+			path = OVGapDemo;
+			sourceTree = "<group>";
+		};
+		C15E543117E2DFFB000135D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C15E543217E2DFFB000135D0 /* OVGapDemo-Info.plist */,
+				C15E543317E2DFFB000135D0 /* InfoPlist.strings */,
+				C15E543617E2DFFB000135D0 /* main.m */,
+				C15E543817E2DFFB000135D0 /* OVGapDemo-Prefix.pch */,
+				C15E543C17E2DFFB000135D0 /* Default.png */,
+				C15E543E17E2DFFB000135D0 /* Default@2x.png */,
+				C15E544017E2DFFB000135D0 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C15E544D17E2E078000135D0 /* OVGapKit */ = {
+			isa = PBXGroup;
+			children = (
+				C15E544F17E2E0E2000135D0 /* JSONUtility.h */,
+				C15E545017E2E0E2000135D0 /* JSONUtility.m */,
+				C15E545117E2E0E2000135D0 /* NSString+URI.h */,
+				C15E545217E2E0E2000135D0 /* NSString+URI.m */,
+				C15E545317E2E0E2000135D0 /* OGInvokeCommand.h */,
+				C15E545417E2E0E2000135D0 /* OGInvokeCommand.m */,
+				C15E545517E2E0E2000135D0 /* OGPlugin.h */,
+				C15E545617E2E0E2000135D0 /* OGPlugin.m */,
+				C15E545717E2E0E2000135D0 /* OGWebView.h */,
+				C15E545817E2E0E2000135D0 /* OGWebView.m */,
+			);
+			path = OVGapKit;
+			sourceTree = "<group>";
+		};
+		D377207817E712AF00C87EF7 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				D377207917E712AF00C87EF7 /* demo.mp3 */,
+			);
+			name = assets;
+			path = OVGapDemo/assets;
+			sourceTree = "<group>";
+		};
+		D377207B17E72D4000C87EF7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D377207C17E72D4000C87EF7 /* OGAppDelegate.h */,
+				D377207D17E72D4000C87EF7 /* OGAppDelegate.m */,
+				D377207E17E72D4000C87EF7 /* OGDemoWebViewController.h */,
+				D377207F17E72D4000C87EF7 /* OGDemoWebViewController.m */,
+				D377208017E72D4000C87EF7 /* Plugins */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D377208017E72D4000C87EF7 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				D377208117E72D4000C87EF7 /* InfoPlugin.h */,
+				D377208217E72D4000C87EF7 /* InfoPlugin.m */,
+				D377208617E72D8000C87EF7 /* AudioPlugin.h */,
+				D377208717E72D8000C87EF7 /* AudioPlugin.m */,
+				D377208917E7332C00C87EF7 /* PhotoLibraryPlugin.h */,
+				D377208A17E7332C00C87EF7 /* PhotoLibraryPlugin.m */,
+				D377208C17E7336200C87EF7 /* CameraPlugin.h */,
+				D377208D17E7336200C87EF7 /* CameraPlugin.m */,
+				D377208F17E733C900C87EF7 /* SenserPlugin.h */,
+				D377209017E733C900C87EF7 /* SenserPlugin.m */,
+				D377209217E7340600C87EF7 /* NetworkPlugin.h */,
+				D377209317E7340600C87EF7 /* NetworkPlugin.m */,
+				D377209517E735A400C87EF7 /* DispatchPlugin.h */,
+				D377209617E735A400C87EF7 /* DispatchPlugin.m */,
+				D312504A17E84D3E00B09A98 /* AddressBookPlugin.h */,
+				D312504B17E84D3E00B09A98 /* AddressBookPlugin.m */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C15E542617E2DFFB000135D0 /* OVGapDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C15E544A17E2DFFB000135D0 /* Build configuration list for PBXNativeTarget "OVGapDemo" */;
+			buildPhases = (
+				C15E542317E2DFFB000135D0 /* Sources */,
+				C15E542417E2DFFB000135D0 /* Frameworks */,
+				C15E542517E2DFFB000135D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OVGapDemo;
+			productName = OVGapDemo;
+			productReference = C15E542717E2DFFB000135D0 /* OVGapDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C15E541F17E2DFFB000135D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OV;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = vepace;
+			};
+			buildConfigurationList = C15E542217E2DFFB000135D0 /* Build configuration list for PBXProject "OVGapDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C15E541E17E2DFFB000135D0;
+			productRefGroup = C15E542817E2DFFB000135D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C15E542617E2DFFB000135D0 /* OVGapDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C15E542517E2DFFB000135D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C15E543517E2DFFB000135D0 /* InfoPlist.strings in Resources */,
+				C15E543D17E2DFFB000135D0 /* Default.png in Resources */,
+				C15E543F17E2DFFB000135D0 /* Default@2x.png in Resources */,
+				C15E544117E2DFFB000135D0 /* Default-568h@2x.png in Resources */,
+				D377207A17E712AF00C87EF7 /* demo.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C15E542317E2DFFB000135D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C15E543717E2DFFB000135D0 /* main.m in Sources */,
+				C15E545917E2E0E2000135D0 /* JSONUtility.m in Sources */,
+				C15E545A17E2E0E2000135D0 /* NSString+URI.m in Sources */,
+				C15E545B17E2E0E2000135D0 /* OGInvokeCommand.m in Sources */,
+				C15E545C17E2E0E2000135D0 /* OGPlugin.m in Sources */,
+				C15E545D17E2E0E2000135D0 /* OGWebView.m in Sources */,
+				D377208317E72D4000C87EF7 /* OGAppDelegate.m in Sources */,
+				D377208417E72D4000C87EF7 /* OGDemoWebViewController.m in Sources */,
+				D377208517E72D4000C87EF7 /* InfoPlugin.m in Sources */,
+				D377208817E72D8000C87EF7 /* AudioPlugin.m in Sources */,
+				D377208B17E7332C00C87EF7 /* PhotoLibraryPlugin.m in Sources */,
+				D377208E17E7336200C87EF7 /* CameraPlugin.m in Sources */,
+				D377209117E733C900C87EF7 /* SenserPlugin.m in Sources */,
+				D377209417E7340600C87EF7 /* NetworkPlugin.m in Sources */,
+				D377209717E735A400C87EF7 /* DispatchPlugin.m in Sources */,
+				D312504C17E84D3E00B09A98 /* AddressBookPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C15E543317E2DFFB000135D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C15E543417E2DFFB000135D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C15E544817E2DFFB000135D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C15E544917E2DFFB000135D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C15E544B17E2DFFB000135D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OVGapDemo/OVGapDemo-Prefix.pch";
+				INFOPLIST_FILE = "OVGapDemo/OVGapDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C15E544C17E2DFFB000135D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OVGapDemo/OVGapDemo-Prefix.pch";
+				INFOPLIST_FILE = "OVGapDemo/OVGapDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C15E542217E2DFFB000135D0 /* Build configuration list for PBXProject "OVGapDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C15E544817E2DFFB000135D0 /* Debug */,
+				C15E544917E2DFFB000135D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C15E544A17E2DFFB000135D0 /* Build configuration list for PBXNativeTarget "OVGapDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C15E544B17E2DFFB000135D0 /* Debug */,
+				C15E544C17E2DFFB000135D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C15E541F17E2DFFB000135D0 /* Project object */;
+}
