@@ -1,0 +1,41 @@
+
+<html>
+  <head>
+    <title>OVGap Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <script src="http://localhost/ovgap/ovgap.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+  </head>
+  <body>
+
+    <div>
+      <textarea id="consoleBar" disabled="disabled" width="300" height="100" rows="6"></textarea>
+      <br>
+      &nbsp;<a class="button red small" style="width:auto; float:left; margin-left:10px; margin-up:13px;" onclick="refresh()">Refresh</a>
+      &nbsp;<a class="button red small" onclick="clearConsoleBar()" style="width:auto; float:right; margin-right:10px; margin-up:3px;">Clear</a>
+    </div>
+
+    <div>
+      &nbsp;<a class="button green" onclick="testDeviceInfo()">Device Info</a>
+      &nbsp;<a class="button green" onclick="">PhotoLibrary</a>
+      <br><br>
+      &nbsp;<a class="button green" onclick="testCamera()">Camera</a>
+      &nbsp;<a class="button green" onclick="testAudio();" id="audioBtn">Audio</a>
+      <br><br>
+      &nbsp;<a class="button green" onclick="testAddressBook()">Address Book</a>
+      &nbsp;<a class="button green" onclick="">File Manager</a>
+      <br><br>
+      &nbsp;<a class="button orange" onclick="testDispatch()">Dispatch</a>
+      &nbsp;<a class="button orange" onclick="testActivate()">Activate</a>
+      <br><br>
+      &nbsp;<a class="button orange" onclick="testGroup1Dispatch()">DispatchGroup1</a>
+      &nbsp;<a class="button orange" onclick="testGroup1Activate()">ActivateGroup1</a>
+      <br><br>
+      &nbsp;<a class="button orange" onclick="testGroup2Dispatch()">DispatchGroup2</a>
+      &nbsp;<a class="button orange" onclick="testGroup2Activate()">ActivateGroup2</a>
+    </div>
+
+  </body>
+
+</html>

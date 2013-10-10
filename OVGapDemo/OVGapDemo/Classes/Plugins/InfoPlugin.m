@@ -16,8 +16,13 @@
 
 
 - (void)testDeviceInfo:(OGInvokeCommand *)command {
-    NSDictionary *resultInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:0] forKey:@"currentState"];
-    [self toTriggerListenerSuccess:resultInfo listenId:@"1001"];
+    NSMutableDictionary *deviceInfo = [NSMutableDictionary dictionary];
+    [deviceInfo setObject:[[UIDevice currentDevice] name] forKey:@"name"];
+    [deviceInfo setObject:[[UIDevice currentDevice] systemName] forKey:@"systemName"];
+    [deviceInfo setObject:[[UIDevice currentDevice] systemVersion] forKey:@"systemVersion"];
+    [deviceInfo setObject:[[UIDevice currentDevice] model] forKey:@"model"];
+    [deviceInfo setObject:[[UIDevice currentDevice] localizedModel] forKey:@"localizedModel"];
+    [self toCallBackSuccess:deviceInfo callBackId:command.callBackId];
 }
 
 - (void)visitUserDefault:(OGInvokeCommand *)command {

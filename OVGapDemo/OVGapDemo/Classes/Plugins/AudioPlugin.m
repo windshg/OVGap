@@ -42,7 +42,6 @@
 
 
 // ****************************** lazy getter ******************************* //
-
 - (AVAudioPlayer *)audioPlayer {
     if (!_audioPlayer) {
         NSBundle *mainBundle = [NSBundle mainBundle];

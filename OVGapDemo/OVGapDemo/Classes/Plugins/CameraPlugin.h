@@ -7,9 +7,12 @@
 //
 
 #import "OGPlugin.h"
+#import "OGDemoWebViewController.h"
 
 @interface CameraPlugin : OGPlugin
 
-- (void)openCamera:(OGInvokeCommand *)command;
+@property (nonatomic, assign) OGDemoWebViewController *webViewController;
+
+- (void)testCamera:(OGInvokeCommand *)command;
 
 @end

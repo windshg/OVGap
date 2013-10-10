@@ -47,6 +47,7 @@
     [self.webView addPlugin:photoLibraryPlugin];
     // add plugin
     CameraPlugin *cameraPlugin = [[CameraPlugin alloc] init];
+    cameraPlugin.webViewController = self;
     [self.webView addPlugin:cameraPlugin];
     // add plugin
     SenserPlugin *senserPlugin = [[SenserPlugin alloc] init];

@@ -72,6 +72,9 @@ var ovGap = {
     callbackId: Math.floor(Math.random() * 2000000000),
     callbacks: {},
     commandQueue: [],
+    groupId: Math.floor(Math.random() * 300),
+    groups: {},
+    listeners: {},
     invoke: function(cmd, params, onSuccess, onFail) {
         if(!cmd) cmd = "defaultCommand";
         if(!params) params = {};
@@ -80,7 +83,8 @@ var ovGap = {
             success: onSuccess,
             fail: onFail
         };
-        document.location = "ovgap://" + cmd + "/" + JSON.stringify(params) + "/" + this.callbackId;
+        var rurl = "ovgap://" + cmd + "/" + JSON.stringify(params) + "/" + this.callbackId;
+        document.location = rurl;
     }, 
     dispatchCommand: function(cmd, params, onSuccess, onFail) {
         if(!cmd) cmd = "defaultCommand";
@@ -92,14 +96,44 @@ var ovGap = {
         };
         var command = cmd + "/" + JSON.stringify(params) + "/" + this.callbackId;
         this.commandQueue.push(command);
-    }, 
+    },
     fetchNativeCommands: function() {
         var json = JSON.stringify(this.commandQueue);
         this.commandQueue = [];
         return json;
     },
-    activateCommandQueue: function() {
+    activate: function() {
         document.location = "ovgap://ready";
+    },
+    // return group ID
+    createGroup: function() {
+        this.groupId ++;
+        this.groups[this.groupId] = [];
+        return this.groupId;
+    },
+    dispatchCommandInGroup: function(cmd, params, onSuccess, onFail, groupId) {
+        if (!this.groups[groupId]) return false;
+
+        if(!cmd) cmd = "defaultCommand";
+        if(!params) params = {};
+        this.callbackId ++;
+        this.callbacks[this.callbackId] = {
+            success: onSuccess,
+            fail: onFail
+        };
+        var command = cmd + "/" + JSON.stringify(params) + "/" + this.callbackId;
+        this.groups[groupId].push(command);
+        return true;
+    },
+    activateGroup: function(groupId) {
+        if (!this.groups[groupId]) return false;
+        document.location = "ovgap://group/" + groupId;
+    },
+    fetchNativeGroupCommands: function(groupId) {
+        if (!this.groups[groupId]) return [];
+        var json = JSON.stringify(this.groups[groupId]);
+        this.groups[groupId] = [];
+        return json;
     },
     callbackSuccess: function(callbackId, params) {
         try {
@@ -125,6 +159,27 @@ var ovGap = {
             }
             delete ovGap.callbacks[callbackId];
         };
+    },
+    addGapListener: function(listenId, onSuccess, onFail) {
+        if (!listenId || !onSuccess || !onFail) return;
+        this.listeners[listenId] = {
+            success : onSuccess, 
+            fail : onFail
+        };
+    },
+    removeListener: function(listenId) {
+        if (!this.listeners[listenId]) return;
+        this.listeners[listenId] = null;
+    },
+    triggerListenerSuccess: function(listenId, params) {
+        if (!this.listeners[listenId]) return;
+        var listener = this.listeners[listenId];
+        listener.success && listener.success(listenId, params);
+    },
+    triggerListenerFail: function(listenId, params) {
+        if (!this.listeners[listenId]) return;
+        var listener = this.listeners[listenId];
+        listener.fail && listener.fail(listenId, params);
     }
 };
 
