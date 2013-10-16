@@ -61,6 +61,72 @@ function testDeviceInfo() {
 }
 ```
 
-###Sum Up
+##Dispatch and Activiate
+As we know, the raw communication between Objective-C and Javascript is based on URL redirection which delay a lot actually. Sometimes we want to invoke several methods almost simultaneously. In this situation, the invoke method introduced above might be incompetent and unsuitable. Here introduce another way to invoke the native code.
+
+###Dispatch
+When you want to call several methods almost simultaneously, for example, get some information from native by several different interfaces right after the window is loaded, you should use dispatch:
+```Javascript
+function testDeviceInfo() {
+  var params = {};
+  var success = function (callbackId, params) {
+    alert(params);
+  };
+  var fail = function (callbackId, params) {
+    alert(params);
+  }
+  window.ov_gap.dispatchCommand("getDeviceInfo", params, success, fail);
+}
+```
+Interestingly, the code using dispatch is always the same with the one using invoke. But the logic won't be executed immediately until you call the active function.
+```Javascript
+window.ov_gap.activate();
+```
+After this, all the commands in default group dispatched before will be executed.
+
+###Dispatch in Group
+If you want your function callings to be seperated by some specific groups， dispatching in group will be a good option.
+```Javascript
+var testGroup1 = window.ov_gap.createGroup();
+var testGroup2 = window.ov_gap.createGroup();
+
+function testGroup1Dispatch() {
+  var dispatchId = Math.floor(Math.random() * 2000000);
+  var params = {'val' : dispatchId};
+  var onSuccess = function (callbackId, params) {
+    alert(params);
+  };
+  var onFail = function (callbackId, params) {
+    alert(params);
+  };
+  window.ov_gap.dispatchCommandInGroup("testGroupDispatch", params, onSuccess, onFail, testGroup1);
+}
+
+function testGroup2Dispatch() {
+  var dispatchId = Math.floor(Math.random() * 2000000);
+  var params = {'val' : dispatchId};
+  var onSuccess = function (callbackId, params) {
+    alert(params);
+  };
+  var onFail = function (callbackId, params) {
+    alert(params);
+  };
+  window.ov_gap.dispatchCommandInGroup("testGroupDispatch", params, onSuccess, onFail, testGroup2);
+}
+```
+And the activiation for group is here.
+```Javascript
+function testGroup1Activate() {
+  window.ov_gap.activateGroup(testGroup1);
+}
+
+function testGroup2Activate() {
+  window.ov_gap.activateGroup(testGroup2);
+}
+```
+
+It's basically the same with the pure dispatch one with limitation in group.
+
+##Sum Up
 The project is designed on purpose to build a light bridge between Objective-C and Javascript in IOS development. Please refer to the OVGap Demo Project and enjoy the beauty of coding.
 
