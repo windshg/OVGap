@@ -93,13 +93,15 @@
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [picker dismissModalViewControllerAnimated:YES];
-    [self toCallBackSuccess:info callBackId:self.command.callBackId];
+    [picker dismissViewControllerAnimated:YES completion:^(){
+        [self toCallBackSuccess:info callBackId:self.command.callBackId];
+    }];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissModalViewControllerAnimated:YES];
-    [self toCallBackErrorWithCommand:self.command];
+    [picker dismissViewControllerAnimated:YES completion:^(){
+        [self toCallBackErrorWithCommand:self.command];
+    }];
 }
 
 #pragma mark - UINavigationControllerDelegate

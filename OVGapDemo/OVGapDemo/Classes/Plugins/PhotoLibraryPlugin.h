@@ -7,8 +7,11 @@
 //
 
 #import "OGPlugin.h"
+#import "OGDemoWebViewController.h"
 
 @interface PhotoLibraryPlugin : OGPlugin
+
+@property (nonatomic, assign) OGDemoWebViewController *webViewController;
 
 - (void)openPhotoLibrary:(OGInvokeCommand *)command;
 

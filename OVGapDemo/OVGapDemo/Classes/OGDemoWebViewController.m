@@ -44,6 +44,7 @@
     [self.webView addPlugin:audioPlugin];
     // add plugin
     PhotoLibraryPlugin *photoLibraryPlugin = [[PhotoLibraryPlugin alloc] init];
+    photoLibraryPlugin.webViewController = self;
     [self.webView addPlugin:photoLibraryPlugin];
     // add plugin
     CameraPlugin *cameraPlugin = [[CameraPlugin alloc] init];
