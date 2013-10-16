@@ -18,7 +18,7 @@
 #import "DispatchPlugin.h"
 #import "AddressBookPlugin.h"
 
-#define DEMO_WEBVIEW_URL @"http://localhost/ovgap/demo.html"
+#define DEMO_WEBVIEW_URL @"http://1.vpolor.duapp.com/ovgap/demo.html"
 
 @interface OGDemoWebViewController () <OGWebViewDelegate>
 

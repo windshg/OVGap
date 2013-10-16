@@ -92,23 +92,14 @@
 }
 
 #pragma mark - UIImagePickerControllerDelegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo NS_DEPRECATED_IOS(2_0, 3_0) {
-    
-    NSString *resultMsg = [NSString stringWithFormat:@"x: %f, y: %f", image.size.width, image.size.height];
-    NSDictionary *resultInfo = [NSDictionary dictionaryWithObject:resultMsg forKey:@"image_size"];
-    [self toCallBackSuccess:resultInfo callBackId:self.command.callBackId];
-    
-    [picker dismissViewControllerAnimated:YES completion:^(void){
-        NSLog(@"Picker View Controller is presented");
-    }];
-}
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
+    [picker dismissModalViewControllerAnimated:YES];
+    [self toCallBackSuccess:info callBackId:self.command.callBackId];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
+    [picker dismissModalViewControllerAnimated:YES];
+    [self toCallBackErrorWithCommand:self.command];
 }
 
 #pragma mark - UINavigationControllerDelegate

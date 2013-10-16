@@ -10,7 +10,7 @@
 
 @implementation PhotoLibraryPlugin
 
-- (void)openAlbum:(OGInvokeCommand *)command {
+- (void)openPhotoLibrary:(OGInvokeCommand *)command {
     
 }
 

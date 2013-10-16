@@ -10,6 +10,6 @@
 
 @interface PhotoLibraryPlugin : OGPlugin
 
-- (void)openAlbum:(OGInvokeCommand *)command;
+- (void)openPhotoLibrary:(OGInvokeCommand *)command;
 
 @end
