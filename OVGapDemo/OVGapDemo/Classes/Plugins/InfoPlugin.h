@@ -14,8 +14,4 @@
 
 - (void)testDeviceInfo:(OGInvokeCommand *)command;
 
-- (void)visitUserDefault:(OGInvokeCommand *)command;
-
-- (void)readAddressBook:(OGInvokeCommand *)command;
-
 @end

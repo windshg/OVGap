@@ -25,13 +25,5 @@
     [self toCallBackSuccess:deviceInfo callBackId:command.callBackId];
 }
 
-- (void)visitUserDefault:(OGInvokeCommand *)command {
-    
-}
-
-- (void)readAddressBook:(OGInvokeCommand *)command {
-    
-}
-
 
 @end

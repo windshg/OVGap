@@ -8,7 +8,7 @@ function testDeviceInfo() {
   var success = function (callbackId, params) {
     document.getElementById("consoleBar").innerHTML += JSON.stringify(params) + "\n";
   };
-  var fail = function () {
+  var fail = function (callbackId, params) {
     document.getElementById("consoleBar").innerHTML += "fail\n";
   }
   window.ov_gap.invoke("testDeviceInfo", null, success, fail);
