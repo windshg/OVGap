@@ -250,6 +250,11 @@
 				CLASSPREFIX = OV;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = vepace;
+				TargetAttributes = {
+					C15E542617E2DFFB000135D0 = {
+						DevelopmentTeam = B83JBVZ6M5;
+					};
+				};
 			};
 			buildConfigurationList = C15E542217E2DFFB000135D0 /* Build configuration list for PBXProject "OVGapDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -380,11 +385,14 @@
 		C15E544B17E2DFFB000135D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OVGapDemo/OVGapDemo-Prefix.pch";
 				INFOPLIST_FILE = "OVGapDemo/OVGapDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -392,11 +400,14 @@
 		C15E544C17E2DFFB000135D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OVGapDemo/OVGapDemo-Prefix.pch";
 				INFOPLIST_FILE = "OVGapDemo/OVGapDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
