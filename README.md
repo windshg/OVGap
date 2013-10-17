@@ -3,6 +3,20 @@ OVGap
 
 A light framework which is responsible for the communication between IOS native Objective-C code and Javascript. It's based on plugin architecture. You    can add plugins to the web view to offer your native functional interfaces  which can be invoked by Javascript code from the web view. The sample is following.
 
+##Deployment
+###Remote Website
+The file tree of demo project contains three main parts(OVGapKit, Demo, Web). The web folder contains the demo web page. There is a simple way to test the demo by using native apache server (Of course other servers like nginx are available). You put the folder "ovgap" including all its subfiles in apache's htdocs and start the server. In this case, you can simulate a remote server with your web project in it. Then set the final URL (eg, "http://localhost/ovgap/demo.html") to the macro "DEMO_WEBVIEW_URL" in the file "OGDemoWebViewController.m" .
+```
+#define DEMO_WEBVIEW_URL @"http://1.vpolor.duapp.com/ovgap/demo.html"
+```
+Then you are able to modify the web files in "ovgap" in apache server for your intention.
+
+###Native Website
+Here comes another option in which you can run an embed http server in the demo app and put the web files into its root. In this case, you can group your web files and native files into one project which is easy for migration and management. But it's kind of heavy to embeb a whole http server into just one app. If you choose this way, I am a big fan of CocoaHttpServer.
+
+Which way to choose depends on your consideration. If there are so many web files, embed client server may be a good option. If there is just some single or few pages, I recommend you to load the page from remote site.
+
+##Sample
 ### Objective-C:
 For native Objective C code, the configuration of plugins is pretty easy. All you have to do is to implement a class which is inherited from OGPlugin and then to fill it with methods whom you want to offer to Javascript Code from web view as native interface. Here is the sample plugin.
 ```ObjectiveC 
