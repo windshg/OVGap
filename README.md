@@ -7,7 +7,7 @@ A light framework which is responsible for the communication between IOS native 
 ###Remote Website
 The file tree of demo project contains three main parts(OVGapKit, Demo, Web). The web folder contains the demo web page. There is a simple way to test the demo by using native apache server (Of course other servers like nginx are available). You put the folder "ovgap" including all its subfiles in apache's htdocs and start the server. In this case, you can simulate a remote server with your web project in it. Then set the final URL (eg, "http://localhost/ovgap/demo.html") to the macro "DEMO_WEBVIEW_URL" in the file "OGDemoWebViewController.m" .
 ```
-#define DEMO_WEBVIEW_URL @"http://1.vpolor.duapp.com/ovgap/demo.html"
+#define DEMO_WEBVIEW_URL @"http://localhost/ovgap/demo.html"
 ```
 Then you are able to modify the web files in "ovgap" in apache server for your intention.
 
