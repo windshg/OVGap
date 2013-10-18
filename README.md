@@ -6,10 +6,14 @@ A light framework which is responsible for the communication between IOS native 
 ##Deployment
 ###Remote Website
 The file tree of demo project contains three main parts(OVGapKit, Demo, Web). The web folder contains the demo web page. There is a simple way to test the demo by using native apache server (Of course other servers like nginx are available). You put the folder "ovgap" including all its subfiles in apache's htdocs and start the server. In this case, you can simulate a remote server with your web project in it. Then set the final URL (eg, "http://localhost/ovgap/demo.html") to the macro "DEMO_WEBVIEW_URL" in the file "OGDemoWebViewController.m" .
-```
+```ObjectiveC
 #define DEMO_WEBVIEW_URL @"http://localhost/ovgap/demo.html"
 ```
-Then you are able to modify the web files in "ovgap" in apache server for your intention.
+Then you are able to modify the web files in "ovgap" in apache server for your intention. This is a simple way to test the demo locally. Actually, I already offer my own test web site originally.
+```ObjectiveC
+http://1.ovgapdemo.duapp.com/demo.html
+```
+If possible, you should put your demo web pages on your own remote server which is more officially for your own app.
 
 ###Native Website
 Here comes another option in which you can run an embed http server in the demo app and put the web files into its root. In this case, you can group your web files and native files into one project which is easy for migration and management. But it's kind of heavy to embeb a whole http server into just one app. If you choose this way, I am a big fan of CocoaHttpServer.
