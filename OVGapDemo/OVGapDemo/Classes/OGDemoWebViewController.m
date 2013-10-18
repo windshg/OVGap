@@ -18,7 +18,7 @@
 #import "DispatchPlugin.h"
 #import "AddressBookPlugin.h"
 
-#define DEMO_WEBVIEW_URL @"http://1.vpolor.duapp.com/ovgap/demo.html"
+#define DEMO_WEBVIEW_URL @"http://1.ovgapdemo.duapp.com/demo.html"
 
 @interface OGDemoWebViewController () <OGWebViewDelegate>
 
@@ -65,10 +65,12 @@
     
     self.webView.webViewDelegate = self;
     [self.view addSubview:self.webView];
-    [self loadRequest];
+    
+    // load from remote server
+    [self loadFromRemoteServer];
 }
 
-- (void)loadRequest {
+- (void)loadFromRemoteServer {
     NSURL *url = [NSURL URLWithString:DEMO_WEBVIEW_URL];
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
