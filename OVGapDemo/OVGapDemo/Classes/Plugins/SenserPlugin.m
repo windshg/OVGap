@@ -11,11 +11,11 @@
 @implementation SenserPlugin
 
 - (void)openGesture:(OGInvokeCommand *)command {
-    
+    // TO DO
 }
 
 - (void)openAccelerator:(OGInvokeCommand *)command {
-    
+    // TO DO
 }
 
 @end

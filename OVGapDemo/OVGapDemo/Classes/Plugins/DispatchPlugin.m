@@ -11,10 +11,12 @@
 @implementation DispatchPlugin
 
 - (void)testDispatch:(OGInvokeCommand *)command {
+    // TO DO
     [self toCallBackSuccess:command.paramsInfo callBackId:command.callBackId];
 }
 
 - (void)testGroupDispatch:(OGInvokeCommand *)command {
+    // TO DO
     [self toCallBackSuccess:command.paramsInfo callBackId:command.callBackId];
 }
 

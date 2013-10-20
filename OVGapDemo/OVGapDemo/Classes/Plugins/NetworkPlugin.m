@@ -11,7 +11,7 @@
 @implementation NetworkPlugin
 
 - (void)checkReachability:(OGInvokeCommand *)command {
-    
+    // TO DO
 }
 
 @end
