@@ -1,7 +1,7 @@
 OVGap
 =====
 
-A light framework which is responsible for the communication between IOS native Objective-C code and Javascript. It's based on plugin architecture. You    can add plugins to the web view to offer your native functional interfaces  which can be invoked by Javascript code from the web view. The sample is following.
+A lightweight framework which is in charge of the communication between IOS native Objective-C code and Javascript. It's based on plugin architecture. You    can add plugins to the web view to offer your native functional interfaces  which can be invoked by Javascript code from the web view. The sample is following.
 
 ##Deployment
 ###Remote Website
